@@ -1,9 +1,7 @@
 ---
 - hosts: lab
   tasks:
-    - name: create a directory
-      file:
-        name: /tmp/demodir
-        state: directory
-        group: support
-        owner: dev1
+    - name: create a file
+       copy:
+         content: "Hello, this file content is from ansible via jenkins"
+         dest: /tmp/demoansible.txt
